@@ -1,0 +1,15 @@
+[package]
+name = "token-backed-study-contracts"
+version = "1.0.0"
+authors = []
+
+[addresses]
+MyModule = "0x9f4e0f9b0eb8fb525b27dda71d6a887cd83d6d6c8e7523e429baeb16639ee799"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
