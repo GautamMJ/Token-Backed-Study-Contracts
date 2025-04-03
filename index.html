@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Contracts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="app">
+        <header class="animate__animated animate__fadeInDown">
+            <h1>Study Contracts</h1>
+            <button id="connectWallet" class="wallet-btn">
+                <i class="fas fa-wallet"></i> Connect Wallet
+            </button>
+        </header>
+
+        <main>
+            <div class="wallet-status animate__animated animate__fadeIn" id="walletStatus">
+                <p>Wallet not connected</p>
+            </div>
+
+            <div class="token-operations animate__animated animate__fadeIn">
+                <h2>Token Operations</h2>
+                <div class="token-form">
+                    <input type="number" id="tokenAmount" placeholder="Amount to transfer" required>
+                    <button id="transferTokens" class="transfer-btn">
+                        <i class="fas fa-exchange-alt"></i> Transfer Tokens
+                    </button>
+                </div>
+                <div id="tokenStatus" class="token-status"></div>
+            </div>
+
+            <div class="contract-form-container animate__animated animate__fadeInUp">
+                <h2>New Contract</h2>
+                <form id="contractForm">
+                    <input type="text" id="studyTitle" placeholder="Study Title" required>
+                    <input type="number" id="tokenAmount" placeholder="Token Amount" required>
+                    <input type="number" id="duration" placeholder="Duration (days)" required>
+                    <button type="submit" id="submitBtn">
+                        <span class="button-text">Create</span>
+                        <div class="loading-spinner hidden">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+            <div class="transactions animate__animated animate__fadeIn">
+                <h2>Recent Transactions</h2>
+                <div id="transactionsList" class="transactions-list">
+                    <!-- Transactions will be added here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@petra/core@latest/dist/index.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
